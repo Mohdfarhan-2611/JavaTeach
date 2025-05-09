@@ -5,7 +5,7 @@ public class ChildConstructor extends ParentConstructor {
     int b;
 
     ChildConstructor(int a , int b){
-        super();
+        //super();
         //this.a=a;  //Child Instance variable
        super.a=a; //parent Instance variable
 
