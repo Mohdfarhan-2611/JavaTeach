@@ -12,7 +12,10 @@ public class Example {
        int a =10;
        Integer b = a;
        int c = b;
-       System.out.println(b.compareTo(10));
+
+
+
+       System.out.println(b);
 
 
 
