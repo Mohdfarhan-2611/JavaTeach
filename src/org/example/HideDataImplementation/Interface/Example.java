@@ -27,6 +27,17 @@ public class Example implements Vehicle, Human {
         System.out.println("This is method 3");
     }
 
+    @Override
+    public void method6(){
+        System.out.println("This is method 6");
+    }
+
+    public static void method7(){
+        System.out.println("From Class Example");
+    }
+
+
+
 
     public static void main(String[] args) {
         Example obj = new Example();
@@ -34,6 +45,9 @@ public class Example implements Vehicle, Human {
         obj.method2();
         obj.method3();
         obj.method4();
+        obj.method5();
+        method7();
+        Human.method7();
         System.out.println(A);
         System.out.println(NAME);
     }
@@ -43,23 +57,28 @@ public class Example implements Vehicle, Human {
 
 interface Vehicle{
 
-    int A = 10;
-    String NAME = "Farhan";
+    public static final int A = 10;
+    public static final String NAME = "Farhan";
 
-    void method1();
-    void method2();
-    void method4();
-
+    public void method1();
+    public void method2();
+    public void method4();
     default void method5(){
-        System.out.println("This is default concreate method");
+        System.out.println();
     }
 
 }
 
 interface Human {
 
-    void method3();
-    void method4();
+    public void method3();
+    public void method4();
+    abstract void method6();
+
+    public static void method7(){
+        System.out.println("Human Interfacre");
+    }
+
 }
 
 
